@@ -75,7 +75,7 @@ The project uses global CSS (`src/app/globals.css`) and likely uses a utility fo
 
 ## Overview
 
-This document outlines the challenges and limitations encountered when implementing WatermelonDB with Next.js, particularly focusing on IndexedDB usage.
+This detail outlines the challenges and limitations encountered when implementing WatermelonDB with Next.js, particularly focusing on IndexedDB usage.
 
 ## Key Findings
 
