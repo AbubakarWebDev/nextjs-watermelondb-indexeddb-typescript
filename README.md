@@ -71,13 +71,11 @@ Image utilities can be found in `src/utils/image/`.
 
 The project uses global CSS (`src/app/globals.css`) and likely uses a utility for conditional class names (`src/utils/cn/`).
 
-# WatermelonDB with Next.js: Limitations and Considerations
-
-## Overview
+## WatermelonDB with Next.js: Limitations and Considerations
 
 This detail outlines the challenges and limitations encountered when implementing WatermelonDB with Next.js, particularly focusing on IndexedDB usage.
 
-## Key Findings
+### Key Findings
 
 ### 1. Babel Configuration Issues
 
