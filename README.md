@@ -45,6 +45,12 @@ pnpm install
 pnpm run dev
 ```
 
+When starting your development server, make sure to include the base path in your browser URL: 
+
+```
+http://localhost:3000/nextjs-watermelondb-indexeddb-typescript
+```
+
 ## Database Configuration
 
 The project uses IndexedDB for client-side storage. Configuration can be found in `src/libs/idb/database.ts`.
