@@ -79,7 +79,7 @@ This detail outlines the challenges and limitations encountered when implementin
 
 ### 1. Babel Configuration Issues
 
-WatermelonDB requires custom Babel configuration, which presents challenges when used with Next.js:
+WatermelonDB requires a custom Babel configuration, which presents challenges when used with Next.js:
 
 - Simple React apps using Babel for compilation can easily accommodate WatermelonDB.
 - Next.js uses the SWC compiler by default for optimized builds.
@@ -97,12 +97,16 @@ WatermelonDB doesn't fully leverage IndexedDB's capabilities:
 
 - Primarily supports string number and boolean datatypes only even though indexed db supports any datatype.
 - Limited diversity in efficiently storable data types.
-- Watermelon DB stores all your data as a single serialized string.
+- Watermelon DB (Loki JS Adapter) stores all your data as a single serialized string against one key setup by them.
 
 #### c. Indexing Underutilization
 
 - Doesn't fully utilize IndexedDB's indexing features.
 - May impact query performance.
+
+#### d. TypeScript Support
+- There are a lot of places where you will see the types are not correctly inferred as they should be.
+- Also there are some places where behind-the-scenes implementations used Typescript "any" to make things work instead of accurate type information.
 
 ## Conclusion
 
