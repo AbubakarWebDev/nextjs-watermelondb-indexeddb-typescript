@@ -95,8 +95,9 @@ WatermelonDB doesn't fully leverage IndexedDB's capabilities:
 
 #### b. Data Type Restrictions
 
-- Primarily supports string-based serialization.
+- Primarily supports string number and boolean datatypes only even though indexed db supports any datatype.
 - Limited diversity in efficiently storable data types.
+- Watermelon DB stores all your data as a single serialized string.
 
 #### c. Indexing Underutilization
 
