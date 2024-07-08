@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { useTodoFormContext } from '@/contexts/todo-form-provider';
+import { useGetTodos } from '@/hooks/idb/todos/get-todos';
 import {
   TodoFormSchemaKeys,
   TodoFormSchemaType,
@@ -10,12 +11,11 @@ import {
 import { createTodo } from '@/services/idb-service';
 import { convertBlobToBase64 } from '@/utils/image';
 
-import { useGetTodos } from '@/hooks/idb/todos/get-todos';
 import { TodoForm } from './todo-form';
 import { EnhancedTodoListView } from './todo-list-view';
 
 export const TodoList = () => {
-  const [btnText, setBtnText] = useState('Submit');
+  const [btnText] = useState('Submit');
 
   const todos = useGetTodos();
   const { formHook } = useTodoFormContext();
@@ -29,6 +29,7 @@ export const TodoList = () => {
       await createTodo(formValues[TodoFormSchemaKeys.NAME], base64Image);
       formHook.reset();
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
     }
   };

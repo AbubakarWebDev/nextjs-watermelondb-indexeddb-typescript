@@ -1,5 +1,4 @@
 import { DATABASE } from '@/constants/idb';
-
 import { database } from '@/libs/idb/database';
 import { Todo } from '@/libs/idb/models/todo-model';
 

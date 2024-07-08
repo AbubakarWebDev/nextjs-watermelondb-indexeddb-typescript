@@ -5,13 +5,13 @@ import { Todo } from '@/libs/idb/models/todo-model';
 import { TodoRow } from './todo-row';
 import { TodoTable } from './todo-table';
 
-interface TodoListView {
+interface TodoListViewProps {
   todos: Todo[];
 }
 
-export const TodoListView: React.FC<TodoListView> = ({ todos }) => {
-  const handleDelete = (id: string) => {};
-  const handleUpdate = (id: string) => {};
+export const TodoListView: React.FC<TodoListViewProps> = ({ todos }) => {
+  const handleDelete = (_id: string) => {};
+  const handleUpdate = (_id: string) => {};
 
   return (
     <TodoTable>

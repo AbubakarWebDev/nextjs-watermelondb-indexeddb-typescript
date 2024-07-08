@@ -12,10 +12,10 @@ const adapter = new LokiJSAdapter({
   dbName: DATABASE.TODO_DB,
   useIncrementalIndexedDB: true,
 
-  onQuotaExceededError: (error) => {
+  onQuotaExceededError: (_error) => {
     // Browser ran out of disk space -- offer the user to reload the app or log out
   },
-  onSetUpError: (error) => {
+  onSetUpError: (_error) => {
     // Database failed to load -- offer the user to reload the app or log out
   },
   extraIncrementalIDBOptions: {

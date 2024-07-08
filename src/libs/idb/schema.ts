@@ -1,5 +1,6 @@
-import { DATABASE } from '@/constants/idb';
 import { appSchema, tableSchema } from '@nozbe/watermelondb';
+
+import { DATABASE } from '@/constants/idb';
 
 export const schema = appSchema({
   version: 1,

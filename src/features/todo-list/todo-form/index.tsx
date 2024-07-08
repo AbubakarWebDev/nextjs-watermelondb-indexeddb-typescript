@@ -51,6 +51,7 @@ export const TodoForm: React.FC<TodoFormProps> = ({
       </FormFieldLayout>
 
       <button
+        type="button"
         onClick={formHook.handleSubmit(handleSubmit)}
         className="hover:shadow-form rounded-md bg-purple-600 px-8 py-2 text-base font-semibold text-white outline-none"
       >

@@ -6,14 +6,16 @@ export const metadata: Metadata = {
   description: 'Watermelon DB with React App',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+const RootLayout: React.FC<Readonly<RootLayoutProps>> = ({ children }) => {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;

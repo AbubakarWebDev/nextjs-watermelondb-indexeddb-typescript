@@ -11,7 +11,7 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier",
+    "prettier"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -23,7 +23,7 @@
   "ignorePatterns": [
     "postcss.config.js",
     "next.config.mjs",
-    "prettier.config.js",
+    "prettier.config.js"
   ],
   "plugins": [
     "jsx-a11y",

@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-const tableColumns = ["#", "Name", "Image", "Update", "Edit"];
+const tableColumns = ['#', 'Name', 'Image', 'Update', 'Edit'];
 
 interface TodoTableProps {
   children: React.ReactNode;
