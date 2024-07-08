@@ -19,9 +19,11 @@ export const TodoRow: React.FC<TodoRowProps> = ({
     <tr className="border-b dark:border-neutral-500">
       <td className="whitespace-nowrap px-6 py-4 font-medium">{index}</td>
       <td className="whitespace-nowrap px-6 py-4">{name}</td>
+
       <td className="whitespace-nowrap px-6 py-4">
         <Image width={100} height={100} alt="Todo Attachment" src={image} />
       </td>
+
       <td className="whitespace-nowrap px-6 py-4">
         <button
           type="button"
@@ -31,6 +33,7 @@ export const TodoRow: React.FC<TodoRowProps> = ({
           Update
         </button>
       </td>
+
       <td className="whitespace-nowrap px-6 py-4">
         <button
           type="button"

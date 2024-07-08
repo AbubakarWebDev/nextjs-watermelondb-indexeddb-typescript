@@ -1,5 +1,5 @@
 import { Model } from '@nozbe/watermelondb';
-import { date, readonly, text } from '@nozbe/watermelondb/decorators';
+import { text } from '@nozbe/watermelondb/decorators';
 
 import { DATABASE } from '@/constants/idb';
 
@@ -9,8 +9,4 @@ export class Todo extends Model {
   @text('name') name?: string;
 
   @text('image') image?: string;
-
-  @readonly @date('created_at') createdAt?: string;
-
-  @readonly @date('updated_at') updatedAt?: string;
 }

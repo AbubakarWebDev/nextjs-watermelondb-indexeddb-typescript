@@ -1,17 +1,30 @@
 import { withObservables } from '@nozbe/watermelondb/react';
 
+import { DATABASE } from '@/constants/idb';
 import { Todo } from '@/libs/idb/models/todo-model';
+import { deleteTodo } from '@/services/idb-service';
+import { getErrorMessage } from '@/utils/common';
 
 import { TodoRow } from './todo-row';
 import { TodoTable } from './todo-table';
 
 interface TodoListViewProps {
   todos: Todo[];
+  handleUpdate: (id: string) => void;
 }
 
-export const TodoListView: React.FC<TodoListViewProps> = ({ todos }) => {
-  const handleDelete = (_id: string) => {};
-  const handleUpdate = (_id: string) => {};
+export const TodoListView: React.FC<TodoListViewProps> = ({
+  todos,
+  handleUpdate,
+}) => {
+  const handleDelete = async (id: string) => {
+    try {
+      await deleteTodo(id);
+    } catch (error) {
+      // eslint-disable-next-line no-alert
+      alert(getErrorMessage(error));
+    }
+  };
 
   return (
     <TodoTable>
@@ -29,7 +42,7 @@ export const TodoListView: React.FC<TodoListViewProps> = ({ todos }) => {
   );
 };
 
-const enhance = withObservables(['todos'], ({ todos }) => ({
+const enhance = withObservables([DATABASE.TODO_MODEL], ({ todos }) => ({
   todos,
 }));
 
